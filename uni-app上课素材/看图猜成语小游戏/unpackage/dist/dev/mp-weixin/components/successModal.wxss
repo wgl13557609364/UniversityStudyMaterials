@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.modal.data-v-0e510bb6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .window.data-v-0e510bb6 {
+  width: 85%;
+  min-height: 480rpx;
+  background: white;
+  border-radius: 20rpx;
+  position: relative;
+  -webkit-animation: show-data-v-0e510bb6 1s 1;
+          animation: show-data-v-0e510bb6 1s 1;
+}
+.modal .window .successText.data-v-0e510bb6 {
+  margin-top: 100rpx;
+  text-align: center;
+  color: #2AB46E;
+  font-size: 60rpx;
+  font-weight: bold;
+}
+@-webkit-keyframes show-data-v-0e510bb6 {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+@keyframes show-data-v-0e510bb6 {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+.modal .successImg.data-v-0e510bb6 {
+  position: absolute;
+  height: 400rpx;
+  top: -246rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.modal .successImg .img.data-v-0e510bb6 {
+  width: 400rpx;
+}
+.determinateText.data-v-0e510bb6 {
+  padding: 20rpx;
+}
+.determinateText .title.data-v-0e510bb6 {
+  font-weight: bold;
+  font-size: 35rpx;
+}
+.determinateText .subTitle.data-v-0e510bb6 {
+  font-size: 30rpx;
+}
+.btnBox.data-v-0e510bb6 {
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: center;
+}
+.btnBox .btn.data-v-0e510bb6 {
+  width: 220rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  background: #EE3435;
+  color: white;
+  text-align: center;
+  line-height: 70rpx;
+}
+.btnBox .btn.data-v-0e510bb6:active {
+  opacity: .8;
+}
+

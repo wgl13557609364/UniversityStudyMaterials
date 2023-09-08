@@ -1,0 +1,70 @@
+{
+	"passwordSecret": [{
+		"version": 1,
+		"value": "usemall.unicloud.password.secret"
+	}],
+	"tokenSecret": "usemall.unicloud.token.secret",
+	"tokenExpiresIn": 259200,
+	"tokenExpiresThreshold": 600,
+	"passwordErrorLimit": 6,
+	"passwordErrorRetryTime": 3600,
+	"autoSetInviteCode": false,
+	"forceInviteCode": false,
+	"bindTokenToDevice": false,
+	"app-plus": {
+		"tokenExpiresIn": 2592000,
+		"oauth": {
+			"weixin": {
+				"appid": "weixin appid",
+				"appsecret": "weixin appsecret"
+			}
+		}
+	},
+	"mp-weixin": {
+		"tokenExpiresIn": 259200,
+		"oauth": {
+			"weixin": {
+				"appid": "微信小程序appid",
+				"appsecret": "微信小程序appsecret"
+			}
+		},
+		"pay": {
+			"appId": "微信小程序appid",
+			"mchId": "微信支付商户号",
+			"key": "微信支付商户key (API密钥)"
+		},
+		"notify-url": "云函数URL化http地址 + /wxpay"
+	},
+	"mp-alipay": {
+		"tokenExpiresIn": 259200,
+		"oauth": {
+			"alipay": {
+				"appid": "支付宝小程序appid",
+				"privateKey": "支付宝小程序私钥",
+				"keyType": "支付宝小程序私钥类型"
+			}
+		},
+		"pay": {
+			"appId": "支付宝小程序appid",
+			"mchId": "支付宝商户号",
+			"privateKey": "应用私钥字符串",
+			"alipayPublicKey": "支付宝公钥"
+		},
+		"notify-url": "云函数URL化http地址 + /alipay"
+	},
+	"service": {
+		"sms": {
+			"name": "应用名称，对应短信模版的name",
+			"codeExpiresIn": 600,
+			"smsKey": "短信密钥key",
+			"smsSecret": "短信密钥secret"
+		},
+		"smscode": {
+			"templateId": "验证码短信模板Id"
+		}
+	},
+	"kd100": {
+		"customer": "快递100 customer",
+		"key": "快递100 授权KEY"
+	}
+}

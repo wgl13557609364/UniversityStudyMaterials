@@ -1,0 +1,21 @@
+{
+    "appid": "17767123",
+    "compilation-args": {
+        "common": {
+            "ignoreTransJs": true
+        },
+        "options": [],
+        "selected": -1
+    },
+    "host": "baiduboxapp",
+    "projectname": "app.usemall.unicloud.0601",
+    "setting": {
+        "urlCheck": true
+    },
+    "swan": {
+        "baiduboxapp": {
+            "swanJsVersion": "3.170.10",
+            "extensionJsVersion": "1.12.3"
+        }
+    }
+}

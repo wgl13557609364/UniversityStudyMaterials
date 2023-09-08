@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.fuchsine.dao.order.OrderMapper">
+
+<resultMap id="toorder" type="order">
+    <result property="id" column="id"/>
+    <result property="orderCode" column="order_code"/>
+    <result property="createDate" column="create_date"/>
+    <result property="sendDate" column="SEND_DATE"/>
+    <result property="userId" column="user_id"/>
+</resultMap>
+
+    <select id="getOrderByUserId" resultMap="toorder">
+        select *from ec_order where USER_ID =#{userid}
+    </select>
+    <select id="geIdrByOrderCode" resultType="int">
+        select ID from ec_order where ORDER_CODE=#{ordercode}
+    </select>
+
+    <select id="geIdrByOrderCode1" resultMap="toorder">
+        select * from ec_order where ORDER_CODE=#{ordercode}
+    </select>
+
+    <insert id="addOrder" parameterType="order">
+        insert into ec_order(ORDER_CODE, CREATE_DATE, AMOUNT, USER_ID) value (#{orderCode},#{createDate},#{amount},#{userId})
+    </insert>
+    <select id="getOrderId" resultType="Integer">
+        select ID from ec_order where ORDER_CODE = #{orderCode}
+    </select>
+
+    <select id="getAllOrderByUserId" resultMap="toorder">
+        select *from ec_order
+    </select>
+    <update id="addrimestatus">
+        update ec_order set SEND_DATE = now() ,STATUS='已出库' where ORDER_CODE=#{ordercode}
+    </update>
+
+
+</mapper>

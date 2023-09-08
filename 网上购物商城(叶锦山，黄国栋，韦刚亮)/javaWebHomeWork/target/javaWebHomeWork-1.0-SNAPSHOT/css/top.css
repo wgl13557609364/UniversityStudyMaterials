@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#hear{
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    width: auto;
+    /*position: relative;*/
+    position: fixed;
+    z-index: 999;
+}
+.header-contain{
+    font-size: 13px;
+    background: #e3e4e5;
+    /*因为整个body是没有边界的，必须要有盒子在中间保持一个width的长度,是的内部元素不能溢出*/
+    width: 1440px;
+    height: 25px;
+    margin: auto;
+}
+
+#u1{
+    margin-left: 10px;
+}
+#u1 li{
+    height: 28px;
+    list-style: none;
+    float: left;
+    margin-left: 18px;
+
+}
+#u1 li a{
+    color: #222222;
+}
+#u2{
+    margin-left: 120px;
+    height: 40px;
+}
+#u2 li{
+    height: 28px;
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin-left: 25px;
+    margin-top: 8px;
+    padding: 0;
+
+}
+#u2 li a:hover{
+    color: #0d84f3;
+}
+#u2 li a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+#body1{
+    background: #a42406;
+    width: 1440px;
+    margin: auto;
+    padding: 0;
+}
+#imgop{
+    margin-left: -1023px;
+
+}
+
+#body2{
+    background: #ff0707;
+    width: 1440px;
+    height: 40px;
+    margin: auto;
+    padding: 0;
+}
+#table{
+    border-collapse: collapse;
+}

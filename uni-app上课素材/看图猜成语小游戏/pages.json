@@ -1,0 +1,33 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle":"custom"
+			}
+		},
+		{
+		    "path" : "pages/game/game",
+		    "style":{
+					"navigationBarTitleText": "第1关",
+					"navigationBarTextStyle": "white"
+				}
+		},
+		{
+			"path" : "pages/checkpoint/checkpoint",
+			"style" : {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "选择关卡"
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "猜成语不咯",
+		"navigationBarBackgroundColor": "#FFD138"
+		
+		
+		
+	}
+}

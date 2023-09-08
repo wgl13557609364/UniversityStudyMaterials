@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.fuchsine.dao.article.ArticleMapperDAo">
+
+
+    <select id="getListArticle" resultType="article">
+        select *from ec_article where DISABLED=0
+    </select>
+    <select id="getListArticled" resultType="article">
+        select *from ec_article where DISABLED=1
+    </select>
+
+    <update id="RecoverArticle">
+        update ec_article set DISABLED=0 where ID=#{id}
+    </update>
+
+    <select id="Inventory" resultType="int">
+        select  storage from ec_article where id = #{id}
+    </select>
+
+    <select id=" getArticleMun" resultType="int">
+        select  storage from ec_article where ID = #{articleId}
+    </select>
+    <update id="upDataInventory">
+        update ec_article set STORAGE =(STORAGE-#{byNum}) where ID=#{articleId}
+    </update>
+    <update id="upDataDisable">
+        update ec_article set DISABLED=1 where ID=#{id}
+    </update>
+
+    <!-- 按关键字查询商品-->
+    <select id="findArticlesLikeTitle" resultType="article">
+        SELECT *FROM ec_article WHERE   DISABLED=0 and TITLE LIKE CONCAT('%',#{title},'%');
+    </select>
+
+    <!-- 按类查询商品-->
+    <select id="findArticlesLikeName" resultType="article">
+        SELECT *FROM ec_article a LEFT JOIN ec_article_type t ON a.`TYPE_CODE`=t.`CODE`
+        WHERE t.`REMARK`=#{remark};
+    </select>
+
+    <!--按关键字和类模糊查询商品-->
+    <select id="findArticlesTitleType" resultType="article">
+        SELECT *FROM ec_article a LEFT JOIN ec_article_type t ON a.`TYPE_CODE`=t.`CODE`
+        WHERE a.`TITLE` LIKE  concat('%',#{title},'%')  AND t.`REMARK`=#{remark};
+    </select>
+
+
+    <update id="updatasell" >
+        update ec_article set PRICE=#{pricr} , DISCOUNT=#{discunt} , STORAGE=#{storage} where ID=#{articleId}
+    </update>
+
+    <select id="findyArticleByType" resultType="article">
+       select *from ec_article where TYPE_CODE like concat(#{type},'%')
+    </select>
+
+</mapper>

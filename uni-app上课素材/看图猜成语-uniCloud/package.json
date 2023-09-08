@@ -1,0 +1,13 @@
+{
+    "id": "helang-idiom-uniCloud",
+    "name": "看图猜成语-uniCloud",
+    "version": "1.1.2",
+    "description": "基于 uniCloud 的 云端一体化看图猜成语游戏",
+    "keywords": [
+        "uniCloud",
+        "看图猜成语",
+        "猜成语",
+        "小游戏",
+        "云端一体"
+    ]
+}

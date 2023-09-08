@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.fuchsine.dao.orderltem.OrderItemMapper">
+
+
+    <resultMap id="tooderitem" type="orderitem">
+        <result property="orderId" column="ORDER_ID"/>
+        <result property="articleId" column="ARTICLE_ID"/>
+        <result property="orderNum" column="ORDER_NUM"/>
+        <association property="article" column="article_Id" javaType="Article" select="getArticle"/>
+    </resultMap>
+    <select id="getArticle" resultType="article">
+        select *from ec_article where id=#{articleId}
+    </select>
+    <select id="getOrderItem" resultMap="tooderitem">
+        select *from ec_order_item where ORDER_ID=#{userid}
+    </select>
+    <insert id="addOrderItem">
+        insert into ec_order_item(ORDER_ID, ARTICLE_ID, ORDER_NUM) VALUE (#{orderid},#{articleid},#{orderNum})
+    </insert>
+
+
+</mapper>

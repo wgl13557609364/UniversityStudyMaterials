@@ -1,0 +1,210 @@
+#wrap{
+    width: 1440px;
+    padding: 0;
+    margin: auto;
+}
+#nav{
+    width: 225px;
+    height: 515px;
+    border: #01061a solid 4px;
+    margin: 0;
+    padding: 0;
+}
+#navframe{
+    position: fixed;
+    padding: 0;
+    width: 225px;
+    height: 515px;
+    margin-top: 130px;
+    border: medium none;
+    display: inline-block;
+    float: left;
+
+}
+/* =========================== */
+#all{
+    width: 1440px;
+    margin: auto;
+    background: #fcf5f3;
+
+}
+#all:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+#righthing{
+    margin-left: 230px;
+
+    margin-top: 100px;
+    display: inline-block;
+    width: 1160px;
+
+
+    background: #ffffff;
+}
+#find{
+    position: fixed;
+    background: #eeebeb;
+    margin-top: 16px;
+    height: 48px;
+    z-index: 3;
+    width: 1160px;
+
+}
+#show{
+    margin-top: 86px;
+    width: 1160px;
+    height: 40px;
+    background: #e10404;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 0;
+    position: fixed;
+    z-index: 6;
+}
+#show > h4{
+    border-radius: 8px 8px 2px 2px;
+    text-align: center;
+    line-height: 30px;
+    background: #dad5d5;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 0;
+    margin-left: 82px;
+    padding: 0;
+}
+#find >span{
+    margin-left: 40px;
+}
+
+
+#find select{
+    margin-top: 8px;
+    height: 25px;
+    width: 110px;
+    font-size: 15px;
+}
+#findtext{
+    margin-top: 5px;
+    height: 28px;
+    width: 260px;
+    font-size: 15px;
+    margin-left: 30px;
+}
+#findbutton{
+    margin-top: 12px;
+    margin-left: 15px;
+    height: 28px;
+    width: 55px;
+    font-size: 15px;
+}
+#anything{
+    margin-top: 75px;
+
+    padding: 0;
+
+}
+#anything ul{
+    margin-top: 30px;
+    margin-left: 80px;
+
+}
+#anything ul li{
+    width: 250px;
+    height: 330px;
+    float: left;
+
+
+    border: #d8d8d8 solid 1px;
+    list-style: none;
+    position: relative;
+
+}
+#anything ul li:hover{
+    border: #f22e00 solid 1px;
+}
+#anything ul li img{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    border: #d8d8d8 solid 1px;
+    box-shadow: 3px 3px 2px #969393;
+}
+.price{
+    position: absolute;
+    top: 220px;
+    left: 45px;
+    margin-bottom: 0;
+
+}
+.fon1{
+    font-size: 16px;
+    color: #b3b3c4;
+}
+.font2{
+    margin-left: 10px;
+    font-size: 22px;
+    color: #e50000;
+}
+.Aall{
+    overflow:hidden;
+    height: 50px;
+    width:220px;
+    position: absolute;
+    top: 260px;
+    left: 22px;
+    padding: 0;
+}
+.Aall a{
+    margin-top: 0;
+    color: #01061a;
+    font-size: 12px;
+}
+#bottom1{
+    padding: 0;
+    margin-left: 225px;
+}
+#bottom1 img{
+    width: 1165px;
+}
+
+/*============================================*/
+
+#nav11{
+    background:  #e3e3e5;
+    width: 180px;
+    height: 350px;
+}
+
+.titlejd{
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 1em;
+    line-height: 35px;
+    background: red url("../images/article/下.png") 150px 5px no-repeat;
+    margin: 0;
+
+}
+#navui{
+    background: #e3e3e5;
+    list-style: none;
+    margin: 0 0 0 50px;
+
+}
+#navul li{
+    height: 30px;
+    list-style: none;
+    text-indent: 1em;
+    background: url("../images/article/右.png") no-repeat 113px 2px;
+
+}
+.nava{
+    text-decoration: none;
+    color: black;
+
+}
+.nava:hover{
+    color: #224be8;
+    text-decoration: underline;
+}

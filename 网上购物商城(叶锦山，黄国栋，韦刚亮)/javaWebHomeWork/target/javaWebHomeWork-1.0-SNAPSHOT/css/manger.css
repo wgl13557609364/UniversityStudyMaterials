@@ -1,0 +1,420 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#hear{
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    width: auto;
+    /*position: relative;*/
+    position: fixed;
+    z-index: 999;
+}
+.header-contain{
+    font-size: 13px;
+    background: #e3e4e5;
+    /*因为整个body是没有边界的，必须要有盒子在中间保持一个width的长度,是的内部元素不能溢出*/
+    width: 1440px;
+    height: 25px;
+    margin: auto;
+}
+
+#u1{
+    margin-left: 10px;
+}
+#u1 li{
+    height: 28px;
+    list-style: none;
+    float: left;
+    margin-left: 18px;
+
+}
+#u2{
+    margin-left: 120px;
+    height: 40px;
+}
+#u2 li{
+    height: 28px;
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin-left: 25px;
+    margin-top: 8px;
+    padding: 0;
+
+}
+#u2 li a:hover{
+    color: #0d84f3;
+}
+#u2 li a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+#body1{
+    background: #a42406;
+    width: 1440px;
+    margin: auto;
+    padding: 0;
+}
+#imgop{
+    margin-left: -1023px;
+
+}
+#imgop img{
+    width: 190px;
+    margin-left: 50px;
+}
+#body2{
+    background: #ff0707;
+    width: 1440px;
+    height: 40px;
+    margin: auto;
+    padding: 0;
+}
+#table{
+    border-collapse: collapse;
+}
+
+/*以上头部*/
+#wrap{
+    width: 1440px;
+    padding: 0;
+    margin: auto;
+}
+#nav{
+    width: 225px;
+    height: 515px;
+    border: #01061a solid 4px;
+    margin: 0;
+    padding: 0;
+}
+#navframe{
+    position: fixed;
+    padding: 0;
+    width: 225px;
+    height: 515px;
+    margin-top: 130px;
+    border: medium none;
+    display: inline-block;
+    float: left;
+
+}
+/* =========================== */
+#all{
+    width: 1440px;
+    margin: auto;
+    background: #ffffff;
+    padding: 0;
+
+}
+#all >div{
+    margin-bottom: 0;
+}
+
+
+#all:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+#righthing{
+    margin-left: 140px;
+    margin-top: 120px;
+    display: inline-block;
+    width: 1160px;
+}
+
+#anything{
+    margin-top: 100px;
+    padding: 0;
+    margin-bottom: 0;
+
+}
+#main1{
+    margin-top: -50px;
+}
+
+#bottom1{
+    padding: 0;
+    margin-left: 145px;
+    margin-top: 120px;
+    margin-bottom: 0;
+}
+#bottom1 img{
+    width: 1165px;
+    margin: 0;
+    padding: 0;
+}
+/*==================================*/
+
+
+
+/*表格上提示栏*/
+#titledo{
+    height: 24px;
+    background: #e5dbcd;
+    margin: 20px auto auto;
+    padding: 0;
+    width: 1147px;
+}
+
+#s1{
+    margin-left: 10px;
+
+}
+#s2{
+
+}
+#s3{
+    margin-left: 120px;
+}
+#s4{
+    margin-left: 210px;
+}
+#s5{
+    margin-left: 98px;
+}
+#s6{
+    margin-left: 105px;
+}
+#s7{
+    margin-left: 100px;
+}
+#s8{
+    margin-left: 100px;
+}
+
+.ss1{
+    position: absolute;
+    top: 45px;
+    left: 10px;
+}
+.ss2{
+    position: absolute;
+    top: 10px;
+    left: 35px;
+}
+
+
+
+
+
+
+#table1{
+    border-collapse: collapse;
+    margin: 0px auto auto;
+    border: #01061a 2px;
+}
+#table1 tr{
+    height: 100px;
+    border: #a9aaad solid 2px;
+}
+#table1 td{
+
+}
+.t1{
+    width: 430px;
+    position: relative;
+}
+.t2{
+    width: 120px;
+    text-align: center;
+}
+.t3{
+    width: 160px;
+    text-align: center;
+}
+.rs{
+    color: red;
+}
+
+.t4{
+    width: 160px;
+    text-align: center;
+}
+.t5{
+    width: 130px;
+    position: relative;
+}
+.t6{
+    text-align: center;
+}
+
+.num{
+    position: absolute;
+    width: 60px;
+    height: 36px;
+    top: 31px;
+    left: 20px;
+
+}
+.b1{
+    position: absolute;
+    width: 29px;
+    height: 18px;
+    left: 80px;
+    top: 31px;
+}
+.bb2{
+    position: absolute;
+    width: 29px;
+    height: 18px;
+    left: 80px;
+    top: 49px;
+}
+.debb{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    left: 36px;
+    top: 58px;
+    background: white;
+    border: none;
+    font-size: 15px;
+    color: #2828f5;
+    font-weight: bolder;
+}
+.debb1{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    left: 36px;
+    top: 20px;
+    background: white;
+    border: none;
+    font-size: 15px;
+    color: #2828f5;
+    font-weight: bolder;
+}
+
+
+.t6{
+    width: 140px;
+    position: relative;
+}
+.divtit1{
+    border: #01061a 1px;
+    height: 70px;
+    width: 280px;
+    position: absolute;
+    top: 13px;
+    left: 130px;
+    font-size: 13px;
+    color: blue;
+}
+
+
+
+
+
+#sf{
+    margin-top: 90px;
+    float: right;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.sf1{
+    color: red;
+    clear: both;
+}
+#sf >div{
+    margin-bottom: 20px;
+    float: right;
+    clear: both;
+}
+#js{
+    margin-top: 20px;
+    float: right;
+    margin-left: 900px;
+}
+#jx{
+    width: 105px;
+    height: 30px;
+
+}
+#jsb{
+    width: 135px;
+    height: 40px;
+    background: #f22e00;
+    color: white;
+    font-size: 18px;
+    border: #f22e00 1px;
+    border-radius: 5px;
+}
+.msg{
+    border: none;
+    outline: none;
+    background:rgba(0, 0, 0, 0);
+    width: 100%;
+}
+
+/*搜索*/
+#find{
+    position: fixed;
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    height: 40px;
+    z-index: 5;
+    width: 1160px;
+    background: #ebefef;
+
+}
+#show{
+    margin-top: 86px;
+    width: 1160px;
+    height: 40px;
+    background: #e10404;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 0;
+    position: fixed;
+    z-index: 6;
+}
+#show > h4{
+    border-radius: 8px 8px 2px 2px;
+    text-align: center;
+    line-height: 30px;
+    background: #dad5d5;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 0;
+    margin-left: 82px;
+    padding: 0;
+}
+#find >span{
+    margin-left: 40px;
+}
+
+
+#find select{
+    margin-top: 8px;
+    height: 25px;
+    width: 110px;
+    font-size: 15px;
+}
+#findtext{
+    margin-top: 5px;
+    height: 28px;
+    width: 260px;
+    font-size: 15px;
+    margin-left: 30px;
+}
+#findbutton{
+    margin-top: 12px;
+    margin-left: 15px;
+    height: 28px;
+    width: 55px;
+    font-size: 15px;
+}
+#findbutton1{
+    margin-top: 12px;
+    margin-left: 15px;
+    height: 28px;
+    width: 95px;
+    font-size: 15px;
+}

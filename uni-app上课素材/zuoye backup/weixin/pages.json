@@ -1,0 +1,82 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		
+	    {
+            "path" : "pages/tabBar/page1/page1",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+        ,{
+            "path" : "pages/tabBar/page2/page2",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/tabBar/page3/page3",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/tabBar/page4/page4",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"selectedColor":"#08BF62",
+		"list":[
+			{
+				"text":"微信",
+				"iconPath":"./static/liaotian.png",
+				"selectedIconPath":"./static/liaotian_selected.png",
+				"pagePath":"pages/tabBar/page1/page1"
+			},
+			{
+				"iconPath":"static/tongxunlv.png",
+				"selectedIconPath":"static/tonxunlv_selected.png",
+				"pagePath":"pages/tabBar/page2/page2",
+				"text":"通讯录"
+			},
+			{
+				"iconPath":"static/faxian.png",
+				"selectedIconPath":"static/faxian_selected.png",
+				"pagePath":"pages/tabBar/page3/page3",
+				"text":"发现"
+			},
+			{
+				"iconPath":"static/my.png",
+				"selectedIconPath":"static/my_selected.png",
+				"pagePath":"pages/tabBar/page4/page4",
+				"text":"我"
+			}
+		]
+	}
+}

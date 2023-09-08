@@ -1,0 +1,368 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/Register.css">
+    <script src="../js/jquery%20(1).js"></script>
+</head>
+<script>
+    function tip(){
+        alert("请先登陆账号！")
+    }
+
+</script>
+<body>
+<div id="hear">
+    <div class="header-contain">
+        <ul id="u1">
+            <li class="log1"><a class="b2" href="http://localhost:8080/javaWebHomeWork_war/index.jsp" style="color: #222222">登陆</a></li>
+            <li><a class="b2" href="http://localhost:8080/javaWebHomeWork_war/Article" style="color: #222222">商城首页</a></li>
+            <li><a class="b2" onclick="tip()">我的购物车</a></li>
+            <li><a class="b2" onclick="tip()">我的订单</a></li>
+        </ul>
+    </div>
+    <div id="body1">
+        <div>
+            <img src="../images/article/newlogo.gif" title="图片加载失败！" style="margin-left: -1800px">
+        </div>
+    </div>
+    <div id="body2">
+        <ul id="u2">
+            <li><a href="http://localhost:8080/javaWebHomeWork_war/Article">首页</a></li>
+            <li><a  href="javascript:void(0);" onclick="navonclik(this)">护肤</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">彩妆</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">香氛</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">身体护肤</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">礼盒套装</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">母婴专区</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">男士专区</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">粉底</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">睫毛膏</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">唇彩</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">腮红</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">食品保健</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">瘦身类</a></li>
+            <li><a href="javascript:void(0);" onclick="navonclik(this)">美容类</a></li>
+        </ul>
+    </div>
+</div>
+<div id="main">
+    <div id="body3">
+        <form id="from1" method="get" action="http://localhost:8080/javaWebHomeWork_war/newUserAdd">
+            <div id="hmsg"><h3>用户注册：</h3></div>
+
+            <div>
+                <table id="formtable">
+                    <tr>
+                        <td class="lefttd">登陆账号：</td>
+                        <td><input type="text" id="username" name="loginname" class="inputClass1" maxlength="16" placeholder="输入登陆账号" required > <span id="note" style=" display: none; color: red">*该登陆账号已经存在! </span></td>
+                    </tr>
+                    <tr>
+                        <td class="lefttd">登陆密码：</td>
+                        <td><input  id="psw1" type="password" name="password" class="inputClass2" maxlength="16" placeholder="输入密码" required ></td>
+                    </tr>
+                    <tr>
+                        <td  class="lefttd">确认密码：</td>
+                        <td><input  id="psw2" type="password" name="password" class="inputClass3" maxlength="16" placeholder="再次输入" required></td>
+                    </tr>
+                    <tr>
+                        <td class="lefttd">真实姓名：</td>
+                        <td class="righttd"><input type="text" name="trunname" class="inputClass4" maxlength="16" placeholder="输入用户名"  required></td>
+                    </tr>
+                    <tr>
+                        <td class="lefttd">性&nbsp;&nbsp;&nbsp;&nbsp;别</td>
+                        <td  class="righttd">
+                            <input type="radio" name="sex" value="1" checked>男
+                            <input type="radio" name="sex" value="2">女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="lefttd">联系电话：</td>
+                        <td class="righttd"><input id="phone" type="text" name="phone" class="inputClass5" maxlength="16" placeholder="输入联系电话" required></td>
+                    </tr>
+                    <tr>
+                        <td class="lefttd">邮&nbsp;&nbsp;&nbsp;&nbsp;箱：</td>
+                        <td class="righttd"><input type="text" name="email" class="inputClass51" maxlength="16" placeholder="输入邮箱"  required></td>
+                    </tr>
+                    <tr>
+                        <td class="lefttd">详细地址：</td>
+                        <td class="righttd"><input type="text" name="address" class="inputClass6" maxlength="16" placeholder="输入地址" required></td>
+                    </tr>
+                </table>
+            </div>
+            <body id="yanzhnegma">
+            <canvas id="canvas" width="120" height="40"></canvas><span id="spis">看不清点击一下</span><br/>
+            <input type="text" id="text" class="yanz1" placeholder="输入验证码">
+            <input type="submit" value="提交" id="bt" >
+
+            <script>
+<!--                表单验证-->
+            document.getElementById("phone").onblur = function (){
+            var ps = this.value;
+            if (ps.length!=11&&ps.length!=6){
+                alert("您输入的电话长度不符合规范，请重新输入！")
+                this.value='';
+            }else if(this.value==""||isNaN(this.value)){
+                alert("您输入的不是数字，请重新输入！")
+                this.value='';
+            }
+
+            }
+
+
+
+
+            document.getElementById("psw2").onblur = function (){
+                var ps1 = document.getElementById("psw1").value;
+                if(this.value!=ps1){
+                    alert("两次输入的密码不一致，请重新输入!")
+                    document.getElementById("psw1").value='';
+                    this.value='';
+                }
+            }
+
+
+
+
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                var button = document.getElementById("bt");
+                var input = document.getElementById("text");
+                draw();
+                canvas.onclick = function () {
+                    context.clearRect(0, 0, 120, 40);
+                    draw();
+                }
+                // 随机颜色函数
+                function getColor() {
+                    var r = Math.floor(Math.random() * 256);
+                    var g = Math.floor(Math.random() * 256);
+                    var b = Math.floor(Math.random() * 256);
+                    return "rgb(" + r + "," + g + "," + b + ")";
+                }
+                function draw() {
+                    context.strokeRect(0, 0, 120, 40);
+                    var aCode = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+
+                    var arr = []
+                    var num
+                    for (var i = 0; i < 4; i++) {
+                        var x = 20 + i * 20;
+                        var y = 20 + 10 * Math.random();
+                        var index = Math.floor(Math.random() * aCode.length);
+                        var txt = aCode[index];
+                        context.font = "bold 20px 微软雅黑";
+                        context.fillStyle=getColor();
+                        context.translate(x,y);
+                        var deg=90*Math.random()*Math.PI/180;
+                        context.rotate(deg);
+                        context.fillText(txt, 0, 0);
+                        context.rotate(-deg);
+                        context.translate(-x,-y);
+                        arr[i] = txt
+                    }
+                    num = arr[0] + arr[1] + arr[2] + arr[3]
+                    for (var i = 0; i < 8; i++) {
+                        context.beginPath();
+                        context.moveTo(Math.random() * 120, Math.random() * 40);
+                        context.lineTo(Math.random() * 120, Math.random() * 40);
+                        context.strokeStyle=getColor();
+                        context.stroke();
+                    }
+
+                    for (var i = 0; i < 20; i++) {
+                        context.beginPath();
+                        var x = Math.random() * 120;
+                        var y = Math.random() * 40;
+                        context.moveTo(x, y);
+                        context.lineTo(x + 1, y + 1);
+                        context.strokeStyle=getColor();
+                        context.stroke();
+                    }
+                    //提交还要给
+                    button.onclick = function () {
+                        var text = input.value //获取输入框的值
+                        if (text === num) {
+
+                            if(fuchsine==="no"){
+                                alert('用户名存在，请重新输入！')
+                                return false;
+                            }
+                            alert('验证通过')
+                            //========================================================================
+
+
+                            //创建核心对象
+                            var xhttp;
+                            if (window.XMLHttpRequest) {
+                                xhttp = new XMLHttpRequest();
+                            } else {
+                                // code for IE6, IE5
+                                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                            }
+                            //发送请求
+                            xhttp.open("POST", "http://localhost:8080/javaWebHomeWork_war/newUserAdd",false);
+                            xhttp.send();
+
+                            //========================================================================
+                            return true;
+                        }else {
+                            alert('验证码错误')
+                            return false;
+                        }
+                    }
+
+                }
+
+            </script>
+            </body>
+
+        </form>
+        <div id="text1">
+
+            <div id="txt2">
+                <h4>协议声明</h4>
+
+                本注册协议是您与桂林电子科技大学北海学校区（网址：www.guetbh.com，以下简称“平台”）所有者网络工程专业（以下简称为“IT”）之间就平台服务等相关事宜所订立的契约，为了保障您的合法权益，请您仔细阅读本注册协议，充分理解协议的内容。当您点击“我已看过并同意，立即注册”按钮后，本协议即构成对双方有约束力的法律文件，您的注册、登录、浏览行为即视为您接受本协议条款的约束。
+
+                第一条 平台服务条款的确认
+                1、平台的各项产品或服务的所有权和运作权归金小雨所有。用户同意所有注册协议条款并完成注册程序，才能成为平台的注册用户。注册用户确认：本协议条款是处理双方权利义务的契约，且始终有效，法律另有强制性规定或双方另有特别约定的，依其规定。
+                2、平台的注册用户确认自己具有相应的权利能力和行为能力，能够独立承担法律责任。
+                3、金小雨保留在中华人民共和国法律允许的范围内独自决定拒绝服务、关闭用户账户、清除或编辑内容或取消服务的权利。
+
+                第二条 本网站服务
+                平台依法为注册用户提供互联网信息等服务，注册用户充分理解并完全同意本协议及平台相关规则，在此前提下，方有权使用平台的相关服务，服务内容包括浏览网站资讯、商品买卖交易和申请供应链服务商品信息等。
+
+                第三条 用户注册
+                1、用户应自行诚信向本站提供注册资料，保证其提供的注册资料真实、准确、完整、合法有效，用户注册资料如有变动的，应及时更新其注册资料。本网站有义务对用户的资质资格进行审核。如果用户提供的注册资料不合法、不真实、不准确、不详尽的，注册用户需承担由此引起的相应责任及后果，金小雨有权终止注册用户使用平台各项服务。
+                2、注册用户在平台进行浏览活动时，涉及用户真实姓名/名称、通信地址、联系电话、电子邮箱等隐私信息的，视为同意并授权平台收集、使用上述信息，并明知授权收集使用上述信息的法律后果，对上述信息平台将予以严格保密，除非得到注册用户的授权或法律另有规定，平台不会向外界披露注册用户隐私信息。
+                3、平台的注册用户将拥有用户名和密码等账户信息，注册用户可根据平台规定更改密码。注册用户应谨慎合理的保存和使用其用户名和密码。因注册用户保管不当，导致账户信息泄露等责任由用户自行承担。注册用户若发现任何非法使用其账号或存在安全漏洞的情况，请立即通知平台并向公安机关报案。
+                4、注册用户同意并授权平台拥有通过邮件、短信、电话、微信等形式，向注册用户及其收货人发送产品信息、订单信息、促销活动等告知信息的权利。
+                5、注册用户账户在平台发生的一切交易行为均视为注册用户自身行为。注册用户不得将在平台注册获得的账户出借他人使用，否则应承担由此产生的全部责任。
+
+                第四条 注册用户的法律义务
+                本协议依据国家相关法律法规规章制定，注册用户同意严格遵守以下义务：
+                1、不得传输或发表：煽动抗拒、破坏宪法和法律、行政法规实施的言论，煽动颠覆国家政权，推翻社会主义制度的言论，煽动分裂国家、破坏国家统一的言论，煽动民族仇恨、民族歧视、破坏民族团结的言论；
+                2、从中国大陆向境外传输资料信息时必须符合中国有关法规；
+                3、不得利用平台从事洗钱、窃取商业秘密、窃取个人信息等违法犯罪活动；
+                4、不得干扰本站的正常运转，不得侵入本站及国家计算机信息系统；
+                5、不得传输或发表任何违法犯罪的、骚扰性的、中伤他人的、辱骂性的、恐吓性的、伤害性的、庸俗的，淫秽的、不文明的信息资料；
+                6、不得传输或发表损害社会公共利益和危及国家安全的信息资料或言论；
+                7、不得教唆他人从事本条所禁止的行为；
+                8、不得利用在平台注册的账户进行违法牟利性经营活动；
+                9、不得发布任何侵犯他人著作权、商标权等知识产权或合法权利的内容。注册用户应不时关注并遵守平台不定时公布或修改的各类规则和规定。
+                平台保有删除站内各类不符合法律规定或不真实的信息内容而无须通知注册用户的权利。
+                若注册用户未遵守以上规定，平台有权作出独立判断并采取暂停或关闭用户帐号等措施。注册用户须对自己在网上的言论和行为承担法律责任。
+
+                第五条 上架商品信息
+                平台上的价格和数量等信息随时都有可能发生变动，平台不作特别通知。由于平台上商品信息的数量极其庞大，虽然平台会尽最大努力保证注册用户所浏览商品信息的准确性，但由于众所周知的互联网技术因素等客观原因存在，平台网页显示的信息可能会有一定的滞后性或差错，注册用户对此情形知悉并理解。
+
+                第六条 责任限制及不承诺担保
+                请注册用户知悉：除非另有明确的书面说明，平台及其所包含的或以其它方式通过平台提供给注册用户的全部信息、资料、货物（包括软件）和服务，均是在“按现状”和“按现有”的基础上提供的。除非平台另有明确的书面说明，金小雨不对平台的运营及其包含在平台上的信息、资料、货物（包括软件）和服务作任何形式的（明示或默示）保证或担保（中华人民共和国法律另有规定的除外）。如因不可抗力或其它平台无法控制的原因使平台系统崩溃或无法正常使用，导致丢失有关的信息、记录等，金小雨将会以合理的方式尽力协助处理善后事宜，但不承担责任。
+
+                第七条 协议的更新
+                1、根据国家法律法规变化及网站运营需要，金小雨有权对本协议条款不时地进行修改。修改本协议会在首页显著位置公开征求意见，修改内容在实施前七日予以公示，注册用户可以充分表达意见。注册用户不接受修改内容，要求退出平台的，应按照修改前的服务协议承担相关责任。用户继续登陆、使用平台或者接受平台提供的服务的，视为接受修订后的协议，应按修订后的协议履行。修改后的内容公示期满后立即生效，并代替原来的协议内容。注册用户可随时登录查阅最新协议，注册用户有义务不时关注并阅读最新版的协议及网站公告。
+                2、任何经金小雨确认已经违反相关法律法规或本协议或金小雨使用规则的某一项或多项规定的注册用户，金小雨有权给予暂停使用或终止使用的处理，且因此造成的一切责任由注册用户自行承担。
+                3、注册用户与金小雨基于交易合作签署的其他书面协议与本协议不一致的，以双方书面协议为准。
+
+                第八条 协议注册用户的终止
+                1、终止的情形：
+                （1）注册用户违反本协议的约定；
+                （2）变更事项生效后注册用户停止使用并明示不愿接受变更事项的；
+                （3）注册用户明示不愿继续使用平台服务，自愿终止本协议的；
+                （4）法律规定或者金小雨确定应当终止的其他情形。
+                2、终止后的权利义务：
+                （1）本协议终止后，除法律有明确规定外，平台无义务向注册用户或注册用户指定的第三方披露注册用户账户中的任何信息。
+                （2）本协议终止后，平台仍享有下列权利：
+                a.继续保存注册用户留存于金小雨的各类信息；
+                b.对于注册用户终止前的违约行为，平台仍可依据本协议追究违约责任；
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="bottom">
+    <ul class="about">
+        <a href="#"> 关于我们 </a><span>|</span>
+        <a href="#"> 联系我们 </a><span>|</span>
+        <a href="#"> 人才招聘 </a><span>|</span>
+        <a href="#"> 商家入驻 </a><span>|</span>
+        <a href="#"> 广告服务 </a><span>|</span>
+        <a href="#"> 手机商城 </a><span>|</span>
+        <a href="#"> 友情链接 </a><span>|</span>
+        <a href="#"> 销售联盟 </a><span>|</span>
+        <a href="#"> 社区 </a><span>|</span>
+        <a href="#"> 公益 </a><span>|</span>
+        <a href="#"> English Site </a>
+    </ul>
+    <!-- 底部版权 -->
+    <p class="copy">
+        Fuchsine © 2020-2022  桂电guet.com 版权所有
+    </p>
+</div>
+
+</div>
+
+
+<script>
+
+
+
+
+
+    var fuchsine ={};
+
+    <!--   当异步请求 -->
+    document.getElementById("username").onblur = function (){
+
+        var username = this.value;
+        //创建核心对象
+
+        if(username.length<=4){
+            alert("登陆账号不能小于5位")
+        }{
+
+
+            var xhttp;
+            if (window.XMLHttpRequest) {
+                xhttp = new XMLHttpRequest();
+            } else {
+                // code for IE6, IE5
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            //发送请求
+            xhttp.open("GET", "http://localhost:8080/javaWebHomeWork_war/selectUserServlet?username="+ username);
+            xhttp.send();
+
+            //获取响应
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+
+                    if(this.responseText=="true"){
+
+                        document.getElementById("note").style.display='';
+                        fuchsine = "no";
+                    }else {
+                        //用户不存在，清除显示信息
+                        document.getElementById("note").style.display='none';
+                        fuchsine = "yes";
+                    }
+
+                }
+            };
+
+
+        }
+
+
+    }
+
+
+
+
+</script>
+</body>
+</html>

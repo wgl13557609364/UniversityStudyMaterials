@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "第1关",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "success-modal": "/components/successModal",
+    "fail-modal": "/components/failModal"
+  }
+}

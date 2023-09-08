@@ -1,0 +1,36 @@
+
+#nav{
+    background:  #e3e3e5;
+    width: 180px;
+    height: 350px;
+}
+
+.titlejd{
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 1em;
+    line-height: 35px;
+    background: red url("../images/article/下.png") 150px 5px no-repeat;
+    margin: 0;
+
+}
+ul{
+    margin: 0;
+    background: #e3e3e5;
+
+}
+ul li{
+    height: 30px;
+    list-style: none;
+    text-indent: 1em;
+    background: url("../images/article/右.png") no-repeat 113px 2px;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #224be8;
+    text-decoration: underline;
+}

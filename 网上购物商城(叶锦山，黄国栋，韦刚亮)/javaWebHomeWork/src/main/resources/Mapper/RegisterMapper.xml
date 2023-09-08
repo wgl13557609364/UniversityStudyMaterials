@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.fuchsine.dao.register.RegisterMapperDao">
+
+    <select id="getUser" resultMap="get_user">
+        select login_name,password from ec_user where  login_name = #{username}
+    </select>
+    <resultMap id="get_user" type="user">
+        <result property="loginName" column="login_name"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <insert id="addsuer" parameterType="user">
+        insert into ec_user(login_name, password, name, sex,phone,address,email)
+            VALUE (#{loginName},#{password},#{name},#{sex},#{phone},#{address},#{email})
+    </insert>
+
+
+
+</mapper>

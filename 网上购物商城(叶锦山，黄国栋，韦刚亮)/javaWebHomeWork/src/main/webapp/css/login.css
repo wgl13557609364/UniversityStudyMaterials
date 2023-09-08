@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*8==========================================*/
+#isifram{
+    margin: auto;
+}
+
+.header-contain{
+    font-size: 13px;
+    background: #e3e4e5;
+    /*因为整个body是没有边界的，必须要有盒子在中间保持一个width的长度,是的内部元素不能溢出*/
+    width: 1440px;
+    height: 25px;
+    margin: auto;
+}
+
+#u1{
+    margin-left: 870px;
+}
+#u1 li{
+    height: 28px;
+    list-style: none;
+    float: left;
+    margin-left: 18px;
+
+}
+#u2{
+    margin-left: 120px;
+    height: 40px;
+}
+#u2 li{
+    height: 28px;
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin-left: 25px;
+    margin-top: 8px;
+    padding: 0;
+
+}
+#u2 li a:hover{
+    color: #0d84f3;
+}
+#u2 li a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+#body1{
+    background: #a42406;
+    width: 1440px;
+    margin: auto;
+    padding: 0;
+}
+#body1 >div{
+    margin-left: 120px;
+}
+#body2{
+    background: #ff0707;
+    width: 1440px;
+    height: 40px;
+    margin: auto;
+    padding: 0;
+}
+#table{
+    border-collapse: collapse;
+}
+
+
+
+
+
+
+/*=======================================*/
+
+#hear{
+    width: 1440px;
+    margin: auto;
+}
+
+#heardIframe{
+    margin: auto;
+    border: medium none;
+}
+#content{
+    width: 1440px;
+    margin: auto;
+    position: relative;
+}
+#content >div{
+    margin: auto;
+}
+#content >div img{
+    width: 1440px;
+}
+#formDiv{
+    width: 300px;
+    height: 280px;
+    position: absolute;
+    right: 200px;
+    top: 120px;
+    border-radius: 5px;
+    border: 1px black solid;
+    box-shadow: 5px 5px 2px #706d6d;
+}
+.lu{
+    height: 39px;
+    height: 39px;
+    position: absolute;
+    right: 200px;
+    top: 120px;
+}
+/* ==============================================*/
+
+.show{
+    padding-top: 39px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.inputs {
+    position: relative;
+}
+.user,.pwd{
+    width: 254px;
+    height: 38px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    box-sizing: border-box;
+}
+/* 图标位置定位 */
+.inputs span {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-right: 1px solid #ccc;
+    background-color: #f3f3f3;
+    position: absolute;
+}
+/* 将图标导入 */
+.user_img {
+    top: 1px;
+    left: 1px;
+}
+.pwd_img {
+    top: 59px;
+    left: 1px;
+}
+/*!* 登录按钮定位 *!*/
+.button{
+    border: 1px solid #dc161b;
+    display: block;
+    width: 252px;
+    background: #ff0707;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    font-size: 20px;
+}
+.inputs > a{
+    font-size: 13px;
+    float: right;
+    margin-right: 12px;
+    margin-bottom: 2px;
+}
+#add{
+    font-size: 13px;
+    float: right;
+    margin-right: 12px;
+    margin-top: 35px;
+}
+
+
+/*底部*/
+/* 底部基础设置 与中央部分的距离调整 文字居中 字体、字号、颜色 */
+.bottom,.bottom a{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 13px;
+    font-family: SimSun;
+    color: #666666;
+}
+
+/* 调整版权和关于我们项目之间的距离 */
+.bottom .copy{
+    margin-top: 12px;
+}
+/*新框架合并*/
+/*========*/
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.fuchsine.dao.collect.CollectMapper">
+
+    <insert id="addCollect">
+        insert into shop.ec_collect(articleId, userId) VALUE (#{articleid},#{userid})
+    </insert>
+    <select id="finyCollectByMsg"   resultType="collect">
+        select *from shop.ec_collect where articleId=#{articleid} and userId =#{userid}
+    </select>
+
+    <select id="getCollectByUserId" resultMap="tocollect">
+        select *from shop.ec_collect where userId=#{userid}
+    </select>
+    <resultMap id="tocollect" type="collect">
+        <result property="articleId" column="articleId"/>
+        <association property="article" column="articleId" javaType="Collect" select="getArticle"/>
+    </resultMap>
+    <select id="getArticle" resultType="article">
+        select *from shop.ec_article where id=#{articleId}
+    </select>
+    <delete id="deletecollect">
+        delete from shop.ec_collect where userId=#{userid} and articleId=#{articleid}
+    </delete>
+
+
+</mapper>

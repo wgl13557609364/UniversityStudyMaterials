@@ -1,0 +1,31 @@
+第2章 uni-app组件
+
+1、组件是视图层的基本组成单元。一个组件包括开始标签和结束标签，标签上可以写属性，并对属性赋值。
+2、每个组件，包括如下几个部分：以组件名称为标记的开始标签和结束标签、组件内容、组件属性、组件属性值。
+3、开始标签上可以写属性，属性可以又多个，多个属性之间用空格分隔，闭合标签上不能写属性。
+4、开始标签和结束标签之间，称为组件内容。
+5、每个属性通过=赋值。所有组件与属性名都是小写，单词之间以连字符-连接。
+6、根节点为 <template>，这个 <template> 下只能且必须有一个根<view>组件。
+7、每个组件都有各自定义的属性。但所有uni-app的组件都有一些公共属性，组件的共同属性：id、class、style、hidden、data-*、@*
+8、除了上述公共属性，还有一类特殊属性以v-开头，称之为vue指令，如v-if、v-else、v-for、v-model。
+9、增加底部选项卡（二个导航按钮）方法：
+首先在“pages”目录下新建目录“tabBar”及二个二级子目录，在二级子目录下新建页面。新建页面时要注意勾选右上角“创建同名目录”和左下角“在pages.json中注册”。
+10、底部选项卡的按钮菜单图片，格式采用PNG透明图片（可以在iconfont.cn网站下载）。并保存在static目录下。
+11、打开pages.json文件，在此配置文件中，新增tabBar节点。
+12、若修改应用标题，打开pages.json文件，找到“globalStyle”，修改那vigationBarTtitle中的属性即可。
+13、在pages.json文件中，pages数组中第一项表示应用启动页。
+14、页面的跳转：@click="goDetailPage('view')"
+15、视图容器组件—view视图：view类似于传统HTML中的div，用于包裹各种元素内容。
+16、引用单独的样式表：新建目录lib-css，新建smart.css文件，在页面<style></style>中插入全局样式代码@import‘./lib/css/smart.css’;
+17、view视图；scroll-view滚动视图；swiper可滑动视图
+18、布局：横向布局flex-direction:row ；纵向布局flex-direction:column；其他布局
+19、scroll-view滚动视图：分为水平滚动和垂直滚动。需注意在webview渲染的页面中，区域滚动的性能不及页面滚动。
+20、使用竖向滚动时，需要给<scroll-view>一个固定的高度，通过css设置height。而width一般为100%
+21、vertical scroll为纵向滚动；horizontal scroll为横向滚动。
+22、swiper可划动视图：滑块视图容器一般用于左右滑动或上下滑动，比如banner轮播图。
+注意滑动切换和滚动的区别，滑动切换是一屏一屏的切换。swiper下的每个swiper-item是一个滑动切换区域，不能停留在2个滑动区域之间。
+23、基础内容组件：text文本组件、rich-text富文本组件、progress进度条
+24、表单组件：button按钮、radio单选按钮、checkbox多选框、input输入框、picker底部滚动选择器、slider滑块（滑动选择器）、switch开关选择器、textarea多行输入框、form表单。
+25、导航组件：navigator
+26、媒体组件：images图片组件、video视频播放组件、audio音频播放组件
+27、地图组件：map地图

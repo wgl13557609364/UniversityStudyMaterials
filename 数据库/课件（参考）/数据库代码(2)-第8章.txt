@@ -1,0 +1,70 @@
+--以下代码一次性执行
+
+if exists(select * from sys.databases where name='jwgl')
+drop database jwgl
+
+go
+create database jwgl
+
+go
+use jwgl
+create table Student 
+(
+Sno CHAR(9)PRIMARY KEY,
+Sname CHAR(20),
+Ssex CHAR(2),
+Sage SMALLINT,
+Sdept CHAR(20)
+)
+
+create table Course 
+(
+Cno CHAR(4)PRIMARY KEY,
+Cname CHAR(40),
+Cpno CHAR(4),
+Ccredit SMALLINT,
+FOREIGN KEY (Cpno)REFERENCES Course(Cno)
+)
+
+create table SC 
+(
+Sno CHAR(9),
+Cno CHAR(4),
+Grade SMALLINT,
+primary key (Sno,Cno),
+FOREIGN KEY (Sno)REFERENCES Student(Sno),
+FOREIGN KEY (Cno)REFERENCES Course(Cno)
+)
+
+create table classes
+(
+Sdept CHAR(20),
+amount int
+)
+
+--(2) 利用SQL语句中的更新语句（Insert语句、Update语句和Delete语句）往3个表输入示例数据。
+--为表student 插入记录
+insert into student values('200215121','李勇','男',20,'计算机');
+insert into student values('200215122','刘晨','女',19,'计算机');
+insert into student values('200215123','王敏','女',18,'电信');
+insert into student values('200215125','张立','男',19,'物流管理');
+insert into student values('200215126','小强','男',19,'机电');
+
+--(3)为表course插入记录,注意前置课程号
+insert into course values('1','数据库',NULL,4);
+insert into course values('2','数学',NULL,2);
+insert into course values('3','信息系统',NULL,4);
+insert into course values('4','操作系统',NULL,3);
+insert into course values('5','数据结构',NULL,4);
+insert into course values('6','数据处理',NULL, 2);
+insert into course values('7','java',NULL,4);
+
+--(4)为表SC插入记录
+insert into SC values('200215121','1',92);
+insert into SC values('200215121','2',85);
+insert into SC values('200215121','3',88);
+insert into SC values('200215122','2',90);
+insert into SC values('200215122','3',80);
+insert into SC values('200215122','4',59);
+insert into SC values('200215122','7',null);
+
